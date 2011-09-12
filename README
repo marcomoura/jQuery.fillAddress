@@ -1,0 +1,20 @@
+
+Atribuir o método fillAddress() em um input de cep, o autopreenchimento será através do evendo Change(), os parâmetros são opcionais, fornecer apenas ser for necessário alterar os valores dos nomes dos inputs e da url do servidor para consulta do CEP
+$("#cep").fillAddress({
+      	inputs = {
+      		"address_type" : "id_input_type_address",
+      		"address" : "id_input_address",
+      		"neighborhood" : "id_input_neighborhood",
+      		"city" : "id_input_city",
+      		"uf" : "id_input_uf",
+      		"postal_code" : "id_input__postal_code"
+      		},	
+      	 options = {
+      		"server" = : "http://dev.hast.corp.folha.com.br/do.action.wrapper.php"
+      	}
+});
+
+
+@todo  event click em um botão
+
+
