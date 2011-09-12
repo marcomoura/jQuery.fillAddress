@@ -15,7 +15,7 @@
 			"postal_code" : "id_input__postal_code"
 *			},	
 *		 options = {
-*			"server" = : "http://dev.hast.corp.folha.com.br/do.action.wrapper.php"
+*			"server" = : "/search/address"
 *		}
 * });
 * @todo  event click em um botão
@@ -45,7 +45,7 @@
 				"state" : "state" ,
 				"postal_code" : "client_postal_code"
 				} ,
-			"server"   : "/anuncie/endereco/busca" ,
+			"server"   : "/search/address" ,
 		 } ;
 
 		if ( options ) { 
