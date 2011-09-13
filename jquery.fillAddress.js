@@ -26,7 +26,9 @@
 		var st_fillAddress = new plugin_fillAddress( options );
 		this.change( function() { 
 			var postal_code = $( this ).val() ;
-			st_fillAddress.ajax( postal_code ) ;
+			if ( postal_code != "" ) {
+				st_fillAddress.ajax( postal_code ) ;
+			}
 		 } ) ;
 	};
 
