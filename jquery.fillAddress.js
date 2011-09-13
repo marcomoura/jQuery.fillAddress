@@ -74,8 +74,7 @@
 				return false;
 			}
 			this.status( "Buscando, aguarde..." , this.loading ) ;
-			var url = this.settings.server + "?postal_code=" + postal_code + "&" + Math.random() + "&timer_off=1" ;
-			$.getJSON(  url, function() { 
+			$.getJSON( this.settings.server , { postal_code : postal_code } function() { 
 				} ).success( $.proxy( function( JSON ) {
 					var _capitalize_address_type = JSON.address_type[0].toUpperCase() + JSON.address_type.slice(1).toLowerCase() ;
 					$( "#" + _in.address_type ).val( _capitalize_address_type ) ;
