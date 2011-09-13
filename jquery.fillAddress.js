@@ -82,13 +82,18 @@
 			this.status( "Buscando, aguarde..." , this.loading ) ;
 			$.getJSON( this.settings.server , { postal_code : postal_code } function() { 
 				} ).success( $.proxy( function( JSON ) {
-					var _capitalize_address_type = JSON.address_type[0].toUpperCase() + JSON.address_type.slice(1).toLowerCase() ;
-					$( "#" + _in.address_type ).val( _capitalize_address_type ) ;
-					$( "#" + _in.address ).val( JSON.address ) ;
-					$( "#" + _in.neighborhood ).val( JSON.neighborhood ) ;
-					$( "#" + _in.city ).val( JSON.city ) ;
-					$( "#" + _in.state ).val( JSON.state ) ;
-					this.status( "Endereço localizado com sucesso." , this.success )
+					try {
+						var _capitalize_address_type = JSON.address_type[0].toUpperCase() + JSON.address_type.slice(1).toLowerCase() ;
+						$( "#" + _in.address_type ).val( _capitalize_address_type ) ;
+						$( "#" + _in.address ).val( JSON.address ) ;
+						$( "#" + _in.neighborhood ).val( JSON.neighborhood ) ;
+						$( "#" + _in.city ).val( JSON.city ) ;
+						$( "#" + _in.state ).val( JSON.state ) ;
+						this.status( "Endereço localizado com sucesso." , this.success )
+					}
+					catch( error ) {
+						this.display_error( "Ocorreu um erro ao localizar o cep" );
+					}
 			} , this )).error( $.proxy( function() { 
 				this.display_error( "CEP não localizado" );
 			}, this ) ) ;
