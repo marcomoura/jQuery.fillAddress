@@ -18,5 +18,7 @@ $("#cep").fillAddress({
 TODO
   event click em um botão
   adicionar testes Qunit
-  Buscar o cep via google maps
+  Buscar o cep via google maps 
+	http://code.google.com/apis/maps/documentation/javascript/services.html
+	http://code.google.com/apis/maps/documentation/geocoding/
 
