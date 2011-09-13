@@ -53,7 +53,7 @@
 		}
 		
 		this.is_valid = function( postal_code ) {
-			return ( postal_code.match(/^\d+$/) != null ) ? true : false ;
+			return ( ! isNaN( postal_codeb ) ) ;
 		} ,
 
 		this.display_error = function( message ) {
