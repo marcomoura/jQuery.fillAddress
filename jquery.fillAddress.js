@@ -54,8 +54,12 @@
 			$.extend( settings, options ) ;
 		}
 		
+		this.remove_slash = function( postal_code ) {
+			return postal_code.replace( /-/,'' ) ;
+		} ,
+
 		this.is_valid = function( postal_code ) {
-			return ( ! isNaN( postal_codeb ) ) ;
+			return ( ! isNaN( postal_code ) ) ;
 		} ,
 
 		this.display_error = function( message ) {
@@ -71,7 +75,7 @@
 
 		this.ajax = function( postal_code ){
 			var _in = this.settings.input ;
-			if( ! this.is_valid( postal_code ) ) {
+			if( ! this.is_valid( this.remove_slash( postal_code ) ) ) {
 				this.display_error( "O CEP dever ser um valor numérico" ) ;
 				return false;
 			}
