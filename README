@@ -22,3 +22,111 @@ TODO
 	http://code.google.com/apis/maps/documentation/javascript/services.html
 	http://code.google.com/apis/maps/documentation/geocoding/
 
+http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=evandro+alves+da+silva+guaratingueta+s%C3%A3o+paulo+brazil
+
+
+#resultado 
+
+{
+
+    -
+    results: [
+        -
+        {
+            -
+            address_components: [
+                -
+                {
+                    long_name: "R. Evandro Alves da Silva"
+                    short_name: "R. Evandro Alves da Silva"
+                    -
+                    types: [
+                        "route"
+                    ]
+                }
+                -
+                {
+                    long_name: "Guaratinguetá"
+                    short_name: "Guaratinguetá"
+                    -
+                    types: [
+                        "locality"
+                        "political"
+                    ]
+                }
+                -
+                {
+                    long_name: "São Paulo"
+                    short_name: "São Paulo"
+                    -
+                    types: [
+                        "administrative_area_level_1"
+                        "political"
+                    ]
+                }
+                -
+                {
+                    long_name: "Brazil"
+                    short_name: "BR"
+                    -
+                    types: [
+                        "country"
+                        "political"
+                    ]
+                }
+                -
+                {
+                    long_name: "12518-510"
+                    short_name: "12518-510"
+                    -
+                    types: [
+                        "postal_code"
+                    ]
+                }
+            ]
+            formatted_address: "R. Evandro Alves da Silva - Guaratinguetá - São Paulo, 12518-510, Brazil"
+            -
+            geometry: {
+                -
+                bounds: {
+                    -
+                    northeast: {
+                        lat: -22.7813015
+                        lng: -45.1813971
+                    }
+                    -
+                    southwest: {
+                        lat: -22.7820535
+                        lng: -45.1901012
+                    }
+                }
+                -
+                location: {
+                    lat: -22.7817165
+                    lng: -45.1859222
+                }
+                location_type: "GEOMETRIC_CENTER"
+                -
+                viewport: {
+                    -
+                    northeast: {
+                        lat: -22.7803285197085
+                        lng: -45.1813971
+                    }
+                    -
+                    southwest: {
+                        lat: -22.7830264802915
+                        lng: -45.1901012
+                    }
+                }
+            }
+            partial_match: true
+            -
+            types: [
+                "route"
+            ]
+        }
+    ]
+    status: "OK"
+
+}
